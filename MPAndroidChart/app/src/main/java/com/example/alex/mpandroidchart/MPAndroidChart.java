@@ -40,6 +40,8 @@ public class MPAndroidChart {
         dataSet.setValueTextSize(18f);
         dataSet.setValueTextColor(Color.WHITE);
 
+        data = new PieData(labels, dataSet);
+
         // Set the Donut properties
         chart = new PieChart(context);
         chart.setHoleRadius(60f);
@@ -51,10 +53,6 @@ public class MPAndroidChart {
         chart.setCenterTextSize(24f);
         chart.setDescription("Nueva Descripcion");
         chart.setDescriptionTextSize(18f);
-
-        pieChart.addView(chart);
-
-        data = new PieData(labels, dataSet);
         chart.setData(data);
 
         // Set the panel properties
@@ -64,5 +62,6 @@ public class MPAndroidChart {
         l.setYEntrySpace(5f);
         l.setTextSize(18f);
 
+        pieChart.addView(chart);
     }
 }
