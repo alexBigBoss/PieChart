@@ -1,7 +1,9 @@
 package com.example.alex.mpandroidchart;
 
 import android.content.Context;
+import android.content.res.AssetManager;
 import android.graphics.Color;
+import android.graphics.Typeface;
 
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
@@ -52,6 +54,7 @@ public class MPAndroidChart {
         dataSet.setValueTextColor(Color.WHITE);
 
         data = new PieData(labels, dataSet);
+        data.setValueTypeface(Typeface.createFromAsset(context.getAssets(), "OpenSans-Regular.ttf"));
 
         // Set the Donut properties
         chart = new PieChart(context);
@@ -61,6 +64,8 @@ public class MPAndroidChart {
         chart.setDrawHoleEnabled(true);
         chart.setUsePercentValues(true);
         chart.setCenterText("Pie Plot");
+        chart.setDrawCenterText(true);
+        chart.setCenterTextTypeface(Typeface.createFromAsset(context.getAssets(), "OpenSans-Regular.ttf"));
         chart.setCenterTextSize(24f);
         chart.setDescription("Nueva Descripcion");
         chart.setDescriptionTextSize(18f);
