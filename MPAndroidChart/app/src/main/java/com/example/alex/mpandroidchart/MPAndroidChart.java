@@ -12,6 +12,7 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.utils.ColorTemplate;
+import com.github.mikephil.charting.utils.PercentFormatter;
 
 import java.util.ArrayList;
 
@@ -55,10 +56,12 @@ public class MPAndroidChart {
 
         data = new PieData(labels, dataSet);
         data.setValueTypeface(Typeface.createFromAsset(context.getAssets(), "OpenSans-Regular.ttf"));
+        data.setValueFormatter(new PercentFormatter());
 
         // Set the Donut properties
         chart = new PieChart(context);
-        chart.setHoleRadius(60f);
+        chart.setHoleRadius(58f);
+        chart.setTransparentCircleRadius(62f);
         chart.setHoleColor(Color.WHITE);
         chart.setHoleColorTransparent(false);
         chart.setDrawHoleEnabled(true);
