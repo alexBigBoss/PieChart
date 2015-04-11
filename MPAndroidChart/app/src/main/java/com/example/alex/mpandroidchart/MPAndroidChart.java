@@ -28,17 +28,19 @@ public class MPAndroidChart {
         PieData data;
         PieChart chart;
 
-
+        // Set the basic information of the graph
         entries.add(new Entry((float) 20.0, 0));
         entries.add(new Entry((float) 30.0, 1));
         labels.add("January");
         labels.add("February");
 
+        // Set the Pie Chart properties
         dataSet = new PieDataSet(entries, "Months");
         dataSet.setColors(colors);
         dataSet.setValueTextSize(18f);
         dataSet.setValueTextColor(Color.WHITE);
 
+        // Set the Donut properties
         chart = new PieChart(context);
         chart.setHoleRadius(60f);
         chart.setHoleColor(Color.WHITE);
@@ -55,6 +57,7 @@ public class MPAndroidChart {
         data = new PieData(labels, dataSet);
         chart.setData(data);
 
+        // Set the panel properties
         l = chart.getLegend();
         l.setPosition(LegendPosition.RIGHT_OF_CHART);
         l.setXEntrySpace(7f);
