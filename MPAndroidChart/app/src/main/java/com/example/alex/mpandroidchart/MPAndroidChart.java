@@ -1,7 +1,7 @@
 package com.example.alex.mpandroidchart;
 
+import android.support.v7.app.ActionBarActivity;
 import android.content.Context;
-import android.content.res.AssetManager;
 import android.graphics.Color;
 import android.graphics.Typeface;
 
